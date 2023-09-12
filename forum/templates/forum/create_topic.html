@@ -25,7 +25,7 @@
             {% csrf_token %}
 
             <div class="form__group">
-                <label for="room_topic">Enter a Topic</label>
+                <label for="room_topic">Category Name</label>
                 <input required type="text" value="{{topic.category.name}}" name="topic" list="topic-list" />
                 <datalist id="topic-list">
                   <select id="room_topic">
