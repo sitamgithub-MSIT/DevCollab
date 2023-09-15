@@ -107,12 +107,12 @@ def profilepageview(request, pk):
 
     return render(request, "forum/user_profile.html", context)
 
-
+#@login_required(login_url="loginpageview")
 def topicpageview(request, pk):
     topic = Forum.objects.get(id=pk)
     room_messages = topic.messages_set.all()
     participants = topic.participants.all()
-
+        
     if request.method == "POST":
         message = Messages.objects.create(
             user=request.user, room=topic, message=request.POST.get("body")
@@ -214,7 +214,7 @@ def updateuserview(request):
 
         if form.is_valid():
             form.save()
-            return redirect("userprofileview", pk=user.id)
+            return redirect("profilepageview", pk=user.id)
 
     context = {"form": form}
     return render(request, "forum/edit_user_profile.html", context)
