@@ -3,20 +3,34 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
+
 class User(AbstractUser):
+    """
+    Represents a user in the system.
+
+    Attributes:
+        name (str): The name of the user.
+        username (str): The unique username of the user.
+        email (str): The unique email address of the user.
+        bio (str): The bio of the user.
+        avatar (str): The path to the user's avatar image.
+    """
+
     name = models.CharField(max_length=200, null=True)
     username = models.CharField(unique=True, max_length=200, null=True)
     email = models.CharField(unique=True, max_length=200, null=True)
     bio = models.TextField(null=True)
     avatar = models.ImageField(default="avatar.svg", null=True)
 
-    USERNAME_FIELD = 'username'
+    USERNAME_FIELD = "username"
     REQUIRED_FIELDS = []
 
 
-
-
 class Category(models.Model):
+    """
+    Represents a category in the forum.
+    """
+
     name = models.CharField(max_length=100)
 
     class Meta:
@@ -27,6 +41,19 @@ class Category(models.Model):
 
 
 class Forum(models.Model):
+    """
+    Represents a forum in the application.
+
+    Attributes:
+        host (User): The user who created the forum.
+        category (Category): The category to which the forum belongs.
+        name (str): The name of the forum.
+        participants (ManyToManyField): The users who are participating in the forum.
+        description (str): The description of the forum.
+        created_at (datetime): The date and time when the forum was created.
+        updated_at (datetime): The date and time when the forum was last updated.
+    """
+
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
@@ -44,6 +71,17 @@ class Forum(models.Model):
 
 
 class Messages(models.Model):
+    """
+    Represents a message in a forum room.
+
+    Attributes:
+        user (User): The user who posted the message.
+        room (Forum): The forum room where the message is posted.
+        message (str): The content of the message.
+        created_at (datetime): The timestamp when the message was created.
+        updated_at (datetime): The timestamp when the message was last updated.
+    """
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     room = models.ForeignKey(Forum, on_delete=models.CASCADE)
     message = models.TextField()
