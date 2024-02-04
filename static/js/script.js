@@ -43,8 +43,11 @@
 // }
 
 // Menu
-
 const dropdownMenu = document.querySelector(".dropdown-menu");
+/**
+ * Represents the dropdown button element.
+ * @type {HTMLElement}
+ */
 const dropdownButton = document.querySelector(".dropdown-button");
 
 if (dropdownButton) {
@@ -55,6 +58,10 @@ if (dropdownButton) {
 
 // Upload Image
 const photoInput = document.querySelector("#avatar");
+/**
+ * Represents the photo preview element.
+ * @type {HTMLElement}
+ */
 const photoPreview = document.querySelector("#preview-avatar");
 if (photoInput)
   photoInput.onchange = () => {
@@ -65,5 +72,10 @@ if (photoInput)
   };
 
 // Scroll to Bottom
+/**
+ * Represents the conversation thread element.
+ * @type {HTMLElement}
+ */
 const conversationThread = document.querySelector(".room__box");
-if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+if (conversationThread)
+  conversationThread.scrollTop = conversationThread.scrollHeight;
