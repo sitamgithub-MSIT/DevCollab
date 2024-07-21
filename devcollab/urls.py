@@ -20,6 +20,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Set the urlpatterns variable to a list of paths
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("forum.urls")),
