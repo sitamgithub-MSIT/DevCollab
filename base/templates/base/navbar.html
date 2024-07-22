@@ -49,14 +49,12 @@
           </svg>
         </button>
       </div>
-
       {% else %}
       <!-- Not Logged In -->
       <a href="{% url 'loginpageview' %}">
         <img src="{% static 'images/avatar.svg' %}" />
         <p>Login</p>
       </a>
-
       {% endif %}
 
       <div class="dropdown-menu">
