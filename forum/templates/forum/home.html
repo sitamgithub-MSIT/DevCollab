@@ -47,64 +47,13 @@
       </div>
 
       {% include 'forum/feed.html' %}
-      
     </div>
     <!-- Room List End -->
 
     <!-- Activities Start -->
-
     {% include 'forum/activity.html' %}
-
     <!-- Activities End -->
   </div>
 </main>
 
-
 {% endblock %}
-
-
-
-
-
-
-
-
-{% comment %} {% extends 'base/main.html' %} 
-{% block title %}Home | {% endblock %} 
-
-{% block content %}
-
-<style>
-  .home-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    overflow: hidden;
-  }
-</style>
-
-<div class="home-container">
-  <div>
-    {% include 'forum/category.html' %}
-  </div>
-
-  <div>
-    <h3>{{topic_count}} Topics Available</h3>
-    <a href="{% url 'createtopicview' %}">Create Topic</a>
-    {% include 'forum/feed.html' %}
-  </div>
-
-  <div>
-    {% include 'forum/activity.html' %}
-  </div>
-
-</div>
-
-{% endblock %} {% endcomment %}

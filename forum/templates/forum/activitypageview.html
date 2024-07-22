@@ -44,7 +44,6 @@
             </a>
 
             {% if request.user == message.user %}
-
             <div class="roomListRoom__actions">
               <a href="{% url 'deletemessageview' message.id %}">
                 <svg

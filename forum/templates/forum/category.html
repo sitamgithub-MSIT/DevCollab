@@ -10,7 +10,6 @@
     </li>
 
     {% for category in categories %}
-
     <li>
       <a href="{% url 'homepageview' %}?q={{category.name}}"
         >{{category.name}}<span>{{category.forum_set.all.count}}</span></a
