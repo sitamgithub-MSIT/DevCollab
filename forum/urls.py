@@ -7,6 +7,7 @@ URL patterns for the forum application.
 This list defines the mapping between URL patterns and corresponding view functions.
 """
 
+# Set the urlpatterns variable to a list of paths.
 urlpatterns = [
     path("", views.homepageview, name="homepageview"),
     path("topic/<str:pk>/", views.topicpageview, name="topicpageview"),
