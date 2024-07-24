@@ -28,7 +28,7 @@
 
 ### Steps
 
-1. Clone the repository: `git clone https://github.com/yourusername/DevCollab.git`
+1. Clone the repository: `git clone https://github.com/sitamgithub-MSIT/DevCollab.git`
 2. Change into the project directory: `cd DevCollab`
 3. Create a virtual environment: `python -m venv env`
 4. Activate the virtual environment:
@@ -47,15 +47,19 @@ If you want to use a different database other than the default SQLite database, 
 
 Set up your environment variables as described in `env.example`. You can create a `.env` file in the root directory of the project and add the required variables. Make sure to replace the placeholder values with your own. Here are some of the key variables you need to configure:
 
-- `DJANGO_SECRET_KEY`: The secret key for the Django project
+- `SECRET_KEY`: The secret key for the Django project
 - `DEBUG`: Set to `True` for development, `False` for production
 
 If you are using a different database, you will also need to set the following variables:
 
-- `DB_HOST`: The hostname of the database server
+- `DB_NAME`: The name of the database to use
 - `DB_USER`: The username for the database connection
 - `DB_PASSWORD`: The password for the database connection
 - `DB_NAME`: The name of the database to use
+- `DB_HOST`: The hostname of the database server
+- `DB_PORT`: The port number of the database server
+
+You can also configure other Django settings in the `settings.py` file. Refer to the [Django documentation](https://docs.djangoproject.com/en/3.2/ref/settings/) for more information on the available settings.
 
 ## Usage
 
@@ -65,11 +69,11 @@ To start the development server, run `python manage.py runserver`. Access the ap
 
 ## Deployment
 
-For deployment options, you can use vercel as a serverless deployment platform. You can deploy the Django project using the Vercel Serverless Functions. The project is already set up to work with Vercel, so you can deploy it directly from the repository.
+For deployment options, you can use Vercel as a serverless deployment platform. You can deploy the Django project using the Vercel Serverless Functions. The project is already set up to work with Vercel, so you can deploy it directly from the repository.
 
-Files reponsible for the deployment are:
+The files reponsible for the deployment are:
 
-- `vercel.json`: This file contains the configuration for the Vercel deployment. It specifies the routes and the serverless functions to use for the deployment.
+- `vercel.json`: This file contains the configuration for the Vercel deployment. It specifies the routes and serverless functions to use for the deployment.
 - `build_files.sh`: This script is used to build the project before deployment. It installs the dependencies and runs the collectstatic command to collect the static files.
 
 Please refer to the Vercel documentation for more information on how to deploy a Django project using Vercel.
