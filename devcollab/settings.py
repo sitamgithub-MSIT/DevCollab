@@ -10,13 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
@@ -25,7 +25,6 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "django-insecure-1!)$ntdki=&v)#pbx#lcswpa@hf224n(l-63snxw!q3&i2@e@-"
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -46,7 +45,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "forum.apps.ForumConfig",
     "base.apps.BaseConfig",
-    "rest_framework",
 ]
 
 AUTH_USER_MODEL = "forum.User"
@@ -92,16 +90,16 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "railway",
-#         "USER": "postgres",
-#         "PASSWORD": "xXMHKKBKrtCJ5HaGrUto",
-#         "HOST": "containers-us-west-64.railway.app",
-#         "PORT": "7558",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": os.environ.get("DB_ENGINE"),
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT"),
+    }
+}
 
 
 # Password validation
