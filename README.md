@@ -1,5 +1,9 @@
 # DevCollab
 
+Demo: [DevCollab](/)
+
+**Note**: After running the project on deployment for couple of months, I have decided to take it down. You can still run the project locally by following the instructions below.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -15,7 +19,34 @@
 
 ## Introduction
 
+DevCollab is a forum-like web application that enables developers to collaborate, share ideas, and learn from each other. It allows beginners to learn from experienced developers and experienced ones to help others and share their knowledge.
+
 ## Features
+
+- _User Authentication_: Users can sign up, log in, and log out of the application using their email address and password. It uses Django's built-in session-based authentication system for user authentication.
+- _User Profile_: Users can create a profile with their name, email address, bio, and profile picture. They can update their profile information and change their profile picture.
+- _Topics_: Users can create topics to discuss specific subjects, ask questions, and share information with other users. They can view topics created by other users and participate in discussions.
+- _Categories_: Topics are organized into categories to help users find topics related to specific subjects. Users can create categories and assign topics to them.
+- _Comments_: Users can comment on topics to share their thoughts, ask questions, and provide feedback. They can view comments made by other users and reply to them.
+- _Activity Feed_: Users can view an activity feed that displays recent topics, comments, and replies made by other users. They can see updates from other users and stay informed about the latest discussions.
+- _Search_: Users can search for topics, categories, and users using the search bar. They can enter keywords to find relevant content and filter the search results based on different criteria.
+- _Responsive Design_: The application is designed to be responsive and mobile-friendly, allowing users to access it on different devices and screen sizes. It uses CSS media queries to adjust the layout and styling based on the device's screen size.
+- _Admin Panel_: Administrators can manage users, topics, categories, and comments using the Django admin panel. They can view, create, update, and delete content to maintain the application and ensure its smooth operation.
+- _Serverless Deployment_: The application can be deployed using serverless functions on platforms such as Vercel. It uses serverless functions to handle requests and responses, making it scalable and cost-effective for hosting the application.
+
+## Technologies
+
+### Tech Stack
+
+- Backend: Python, Django
+- Frontend: HTML, CSS, JavaScript
+
+### Libraries and Dependencies
+
+- PyCharm/VS Code: IDE for writing code
+- Required Module Are In The requiements.txt
+
+**Note**: All the dependencies are pushed along with code to run the project smoothly
 
 ## Installation
 
