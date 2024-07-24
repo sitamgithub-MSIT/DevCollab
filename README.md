@@ -8,6 +8,7 @@ Demo: [DevCollab](/)
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -23,39 +24,37 @@ DevCollab is a forum-like web application that enables developers to collaborate
 
 ## Features
 
-- _User Authentication_: Users can sign up, log in, and log out of the application using their email address and password. It uses Django's built-in session-based authentication system for user authentication.
-- _User Profile_: Users can create a profile with their name, email address, bio, and profile picture. They can update their profile information and change their profile picture.
-- _Topics_: Users can create topics to discuss specific subjects, ask questions, and share information with other users. They can view topics created by other users and participate in discussions.
-- _Categories_: Topics are organized into categories to help users find topics related to specific subjects. Users can create categories and assign topics to them.
-- _Comments_: Users can comment on topics to share their thoughts, ask questions, and provide feedback. They can view comments made by other users and reply to them.
-- _Activity Feed_: Users can view an activity feed that displays recent topics, comments, and replies made by other users. They can see updates from other users and stay informed about the latest discussions.
-- _Search_: Users can search for topics, categories, and users using the search bar. They can enter keywords to find relevant content and filter the search results based on different criteria.
-- _Responsive Design_: The application is designed to be responsive and mobile-friendly, allowing users to access it on different devices and screen sizes. It uses CSS media queries to adjust the layout and styling based on the device's screen size.
-- _Admin Panel_: Administrators can manage users, topics, categories, and comments using the Django admin panel. They can view, create, update, and delete content to maintain the application and ensure its smooth operation.
-- _Serverless Deployment_: The application can be deployed using serverless functions on platforms such as Vercel. It uses serverless functions to handle requests and responses, making it scalable and cost-effective for hosting the application.
+- **User Authentication**: Users can sign up, log in, and log out of the application using their email address and password. It uses Django's built-in session-based authentication system.
+- **User Profile**: Users can create and update profiles with their name, email address, bio, and profile picture.
+- **Topics**: Users can create topics to discuss specific subjects, ask questions, and share information.
+- **Categories**: Topics are organized into categories to help users find relevant discussions.
+- **Comments**: Users can comment on topics to share thoughts, ask questions, and provide feedback.
+- **Activity Feed**: Users can view an activity feed displaying recent topics, comments, and replies.
+- **Search**: Users can search for topics, categories, and users using keywords.
+- **Responsive Design**: The application is mobile-friendly, adjusting the layout based on the device's screen size.
+- **Admin Panel**: Administrators can manage users, topics, categories, and comments via the Django admin panel.
+- **Serverless Deployment**: The application can be deployed using serverless functions on platforms such as Vercel.
 
 ## Technologies
 
 ### Tech Stack
 
-- Backend: Python, Django
-- Frontend: HTML, CSS, JavaScript
+- **Backend**: Python, Django
+- **Frontend**: HTML, CSS, JavaScript
 
 ### Libraries and Dependencies
 
 - PyCharm/VS Code: IDE for writing code
-- Required Module Are In The requiements.txt
-
-**Note**: All the dependencies are pushed along with code to run the project smoothly
+- All required modules are listed in `requirements.txt`
 
 ## Installation
 
 ### Prerequisites
 
 - Git
-- Python (v3.10 or any other compatible version)
+- Python (v3.10 or compatible version)
 - pip (latest version)
-- PostgreSQL (or any other preferred database if you want to use a different one other than the default)
+- PostgreSQL (or another preferred database)
 
 ### Steps
 
@@ -66,11 +65,8 @@ DevCollab is a forum-like web application that enables developers to collaborate
    - On Windows: `env\Scripts\activate`
    - On macOS/Linux: `source env/bin/activate`
 5. Install dependencies: `pip install -r requirements.txt`
-
-If you want to use a different database other than the default SQLite database, follow these additional steps:
-
-6. Set up the database:
-   - Create a PostgreSQL database
+6. (Optional) Set up a PostgreSQL database:
+   - Create the database
    - Update the database settings in `settings.py`
 7. Run initial migrations: `python manage.py migrate`
 
