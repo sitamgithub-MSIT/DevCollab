@@ -2,7 +2,7 @@
 
 Demo: [DevCollab](/)
 
-**Note**: After running the project on deployment for couple of months, I have decided to take it down. You can still run the project locally by following the instructions below.
+**Note**: After running the project on deployment for a few months, I decided to take it down. You can still run the project locally by following the instructions below.
 
 ## Table of Contents
 
@@ -102,7 +102,7 @@ To start the development server, run `python manage.py runserver`. Access the ap
 
 For deployment options, you can use Vercel as a serverless deployment platform. You can deploy the Django project using the Vercel Serverless Functions. The project is already set up to work with Vercel, so you can deploy it directly from the repository.
 
-The files reponsible for the deployment are:
+The files responsible for the deployment are:
 
 - `vercel.json`: This file contains the configuration for the Vercel deployment. It specifies the routes and serverless functions to use for the deployment.
 - `build_files.sh`: This script is used to build the project before deployment. It installs the dependencies and runs the collectstatic command to collect the static files.
